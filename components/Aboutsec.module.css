@@ -9,6 +9,7 @@
     padding: 20px; /* Add padding around the container */
     gap: 20px; /* Ensure there's space between the image and text */
     margin: 0 50px; /* Add margin for overall spacing */
+    font-family: sans-serif;
   }
   
   .imageContainer {

@@ -4,6 +4,7 @@ import Mainbody from '@/components/Mainbody';
 import Aboutsec from '@/components/Aboutsec';
 import Tickets from '@/components/Tickets';
 import Footer from '@/components/Footer';
+import FAQ from '@/components/FAQ';
 export default function Home() {
   return (
     <>
@@ -12,6 +13,7 @@ export default function Home() {
       <Mainbody />
       <Aboutsec />
       <Tickets />
+      <FAQ />
       <Footer />
     </>
   );
