@@ -1,0 +1,25 @@
+.mainBodyContainer {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space between text and button */
+    align-items: center; /* Align items vertically center */
+    font-family: sans-serif; /* Ensures the font is sans serif */
+    width: 100%;
+    margin: 20px; /* Optional: Add margin for spacing */
+    background: linear-gradient(135deg, orange, rgb(255, 45, 45));
+    padding: 20px; /* Optional: add padding around the container */
+    margin: 0;
+    color: aliceblue;
+  }
+  
+  .textContainer {
+    display: flex; /* Create a flex container for text */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align text to the left */
+    font-weight: 700;
+  }
+  
+  .eventTitle {
+    font-size: 2rem; /* Adjust the font size as needed */
+    line-height: 1.2; /* Adjust line height for better spacing */
+  }
+  

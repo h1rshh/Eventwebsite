@@ -1,0 +1,21 @@
+.heroContainer {
+  display: flex; /* Use Flexbox for layout */
+  flex-direction: row; /* Set direction to row */
+  justify-content: space-between; /* Aligns content with space between them */
+  align-items: center; /* Centers items vertically */
+  width: 100%; /* Full width of the screen */
+}
+
+.heroImage {
+  width: 30%; /* Set the width to 30% of the container */
+  height: 200%; /* Increase height to 2x of the original size */
+  max-width: 600px; /* Optional: Set a maximum width */
+  object-fit: cover; /* Ensures the image covers its area without distortion */
+}
+
+.heroText {
+  font-family: Sans-serif; /* Change font family to sans-serif */
+  font-size: 4.5rem; /* Increase font size */
+  margin-right: 20px; /* Optional: Add some spacing between the text and image */
+  margin-left:  50px;
+}

@@ -1,0 +1,51 @@
+.footer {
+    background-color: #171822;
+    padding: 20px 0;
+    text-align: center;
+    color: azure;
+  }
+  
+  /* Navigation Links */
+  .navLinks {
+    margin-bottom: 20px; /* Reduced the margin for the nav links */
+  }
+  
+  .navLinks a {
+    color: rgb(200, 195, 195);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    font-weight: 600; /* Increased font weight */
+    transition: color 0.3s ease;
+  }
+  
+  .navLinks a:hover {
+    color: red;
+  }
+  
+  /* Divider Line */
+  .divider {
+    width: 80%; /* Adjust the width of the line */
+    height: 1px;
+    background-color: #333;
+    margin: 20px auto; /* Center the line and add some space around it */
+  }
+  
+  /* Social Media Icons */
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Increased gap between icons */
+    padding-top: 20px;
+  }
+  
+  .socialIcons a {
+    color: #333;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+  }
+  
+  .socialIcons a:hover {
+    color: red;
+  }
+  

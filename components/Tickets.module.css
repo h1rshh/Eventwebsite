@@ -1,0 +1,73 @@
+.container {
+    position: relative;
+}
+
+.fullWidthImage {
+    width: 100vw;
+    height: auto;
+    display: block;
+}
+
+.priceCards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 20px;
+}
+
+.priceCard {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 200px;
+    height: 450px; /* Set a fixed height for all cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #6a6b7c;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+.premiumCard {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #6a6b7c;
+}
+
+.premiumCard h3 {
+    color: black;
+}
+
+.priceCard h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.priceCard p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.price {
+    background: linear-gradient(135deg, orange, red);
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 200;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Hover effect for the price cards */
+.priceCard:hover {
+    transform: translateY(-10px); /* Move the card upwards by 10px */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase the shadow on hover */
+}

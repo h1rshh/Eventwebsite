@@ -1,0 +1,36 @@
+.countdownContainer {
+  font-family: sans-serif; /* Set the font family to sans-serif */
+  
+}
+
+.countdownBox {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out the time boxes */
+  margin-right: 100px;
+}
+
+.countdownList {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Display items in a flex row */
+}
+
+.timeBox {
+  border: 2px solid #ccc; /* Thicker border around each time box */
+  padding: 20px; /* Increased padding inside the box */
+  margin-right: 20px; /* Add more right margin */
+  border-radius: 5px; /* Optional: rounded corners */
+  text-align: center; /* Center the text */
+  flex: 1; /* Make boxes flexible */
+}
+
+.countdownNumber {
+  font-size: 2em; /* Increase the font size for numbers */
+  display: block; /* Make numbers block elements */
+}
+
+/* Optional: remove margin from the last item */
+.timeBox:last-child {
+  margin-right: 0; /* No margin on the last item */
+}
