@@ -7,7 +7,6 @@
   margin: 20px; /* Optional: Add margin for spacing */
   background: linear-gradient(135deg, orange, rgb(255, 45, 45));
   padding: 20px; /* Optional: add padding around the container */
-  margin: 0;
   color: aliceblue;
 }
 
@@ -69,11 +68,6 @@
 /* Media Query for Responsiveness */
 @media (max-width: 768px) {
   .mainBodyContainer {
-      flex-direction: column; /* Stack text and countdown vertically */
-      align-items: flex-start; /* Align items to the left */
-  }
-
-  .countdownContainer {
-      margin-top: 20px; /* Add some margin above countdown */
+      display: none; /* Hide the entire mainBodyContainer on mobile screens */
   }
 }
