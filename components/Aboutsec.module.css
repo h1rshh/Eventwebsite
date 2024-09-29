@@ -7,6 +7,9 @@
   margin: 0 50px; /* Add margin for overall spacing */
   font-family: sans-serif;
 }
+.container h1{
+  color: black;
+}
 
 .imageContainer {
   flex: 1; /* Ensure the image container takes up only necessary space */

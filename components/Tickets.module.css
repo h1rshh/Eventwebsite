@@ -1,59 +1,53 @@
 .container {
     position: relative;
+    max-width: 1200px; /* Set a max width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding around the container */
+    overflow: hidden; /* Ensure no overflow is visible */
 }
 
-/* Hide the entire Tickets component on mobile */
-@media (max-width: 768px) {
-    .container {
-        display: none; /* Hide the entire component on mobile */
-    }
+/* Set the image as a background for the container */
+.container::before {
+    content: '';
+    background-image: url('https://media.istockphoto.com/id/1172044327/photo/business-conference-background.jpg?s=612x612&w=0&k=20&c=zN_oPd13Tbs7SAkw6zz4-yhASacoTXOdoSWJcYVg2B8='); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5; /* Adjust opacity if needed */
+    z-index: 1; /* Position it behind the cards */
 }
 
 .fullWidthImage {
-    width: 100vw;
-    height: auto;
-    display: block;
-}
-
-/* Hide images on mobile and tablets */
-@media (max-width: 768px) {
-    .fullWidthImage {
-        display: none; /* Hide image on smaller screens */
-    }
+    display: none; /* Hide the image by default */
 }
 
 .priceCards {
     display: flex;
-    justify-content: center; /* Center align the cards on larger screens */
+    justify-content: center;
     gap: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% - 40px); /* Adjust width to account for padding */
-    max-width: 1200px; /* Optional: Set a max-width for large screens */
+    position: relative; /* Change from absolute to relative */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+    width: 100%;
     padding: 20px;
     font-family: sans-serif;
+    z-index: 2; /* Position cards above the background */
 }
 
 /* Media Query for Responsiveness */
 @media (max-width: 768px) {
     .priceCards {
         flex-direction: column; /* Stack cards vertically */
-        align-items: flex-start; /* Align the cards to the left */
-        position: relative; /* Change position to relative */
-        top: auto; /* Remove top positioning */
-        transform: none; /* Remove transformation */
-        width: 100%; /* Ensure full width on mobile */
+        align-items: center; /* Center the cards */
         padding: 10px; /* Adjust padding for smaller screens */
-        margin-left: 0; /* Ensure no left margin */
-        margin-right: 0; /* Ensure no right margin */
     }
 
-    .priceCard {
-        width: 100%; /* Allow cards to take full width */
-        max-width: 300px; /* Ensure the cards don't get too wide */
-        margin-bottom: 20px; /* Add spacing between cards */
+    /* Hide the background image for smaller screens */
+    .container::before {
+        display: none;
     }
 }
 
@@ -63,23 +57,14 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    width: 200px; /* Keep fixed width for cards on larger screens */
-    height: 450px; /* Set a fixed height for all cards */
+    width: 90%; /* Set card width to 90% of the container */
+    max-width: 300px; /* Set a max width for the cards */
+    height: auto; /* Use auto height for flexible content */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: #6a6b7c;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
-}
-
-/* Media Query to adjust card size on smaller screens */
-@media (max-width: 768px) {
-    .priceCard {
-        width: 50%; /* Ensure cards take the full width of the container */
-        max-width: 50%; /* Allow full width for smaller screens */
-        margin-left: 0; /* Align cards to the left */
-        margin-right: 0; /* No right margin */
-    }
 }
 
 .premiumCard {
@@ -93,12 +78,12 @@
 
 .priceCard h3 {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Responsive font size */
     color: black;
 }
 
 .priceCard p {
-    font-size: 1.1rem;
+    font-size: 1rem; /* Adjusted font size */
     font-weight: bold;
     margin: 5px 0;
 }
@@ -106,9 +91,9 @@
 .price {
     background: linear-gradient(135deg, orange, red);
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* Adjusted font size */
     font-weight: 200;
-    padding: 10px;
+    padding: 8px; /* Reduced padding for smaller screens */
     border-radius: 5px;
     margin: 10px 0;
 }

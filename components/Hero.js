@@ -1,5 +1,5 @@
 import Image from 'next/image'; // Import the Image component
-import styles from './Hero.module.css'; 
+import styles from './Hero.module.css';
 import heroImage from './hero_img.png'; // Ensure this is correct
 
 const Hero = () => {

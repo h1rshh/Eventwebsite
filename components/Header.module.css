@@ -1,69 +1,102 @@
 .header {
-  background-color: white;      /* Background color for the header */
-  padding: 1.5rem 1rem;        /* Add padding */
-  font-family: sans-serif;      /* Font family */
-  display: flex;                /* Flexbox layout */
-  flex-direction: column;       /* Stack items vertically */
-  align-items: center;          /* Center items */
-  overflow: hidden;             /* Prevent overflow */
+  background-color: white;          /* Background color for the header */
+  padding: 1.5rem 1rem;            /* Add padding */
+  font-family: sans-serif;          /* Change font family */
+  display: flex;                    /* Use flexbox for the header */
+  justify-content: space-between;   /* Space between navbar and button */
+  align-items: center;              /* Center items vertically */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .navbar {
-  display: flex;                /* Use flexbox for horizontal alignment */
-  justify-content: space-between; /* Space between links and button */
-  align-items: center;          /* Center items vertically */
-  width: 100%;                  /* Full width */
+  display: flex;                    /* Use flexbox for horizontal alignment */
+  justify-content: flex-start;      /* Align navbar items to the left */
+  align-items: center;              /* Center items vertically */
+  flex-grow: 1;                     /* Allow navbar to grow */
 }
 
 .navList {
-  display: flex;                /* Use flexbox for the list */
-  list-style: none;            /* Remove bullet points */
-  padding: 0;                  /* Remove default padding */
-  margin: 0;                   /* Remove default margin */
+  display: flex;                    /* Use flexbox for the list */
+  list-style: none;                /* Remove bullet points */
+  padding: 0;                      /* Remove default padding */
+  margin: 0;                       /* Remove default margin */
 }
 
 .navList li {
-  margin: 0 20px;              /* Space between list items */
+  margin: 0 15px;                  /* Add margin between list items */
+  position: relative;               /* Set relative positioning for each list item */
 }
 
 .navList li a {
-  text-decoration: none;        /* Remove underline from links */
-  color: #171822;              /* Text color for links */
-  font-weight: 600;            /* Font weight */
-  font-size: 1.4rem;           /* Font size */
+  text-decoration: none;            /* Remove underline from links */
+  color: #171822;                  /* Text color for links */
+  font-weight: 600;                /* Increase font weight */
+  font-size: 1.4rem;               /* Increase font size */
+  transition: color 0.3s;          /* Smooth color transition on hover */
 }
 
+.navList li a:hover {
+  color: #173962;                  /* Change color on hover */
+}
+
+.navList li a::after {
+  content: '';                     /* Empty content for the underline */
+  display: block;                  /* Make it a block element */
+  height: 2px;                     /* Height of the underline */
+  background: #173962;             /* Color of the underline */
+  width: 100%;                     /* Set initial width to 100% of the parent */
+  transition: transform 0.3s;     /* Smooth transition for the transform */
+  position: absolute;              /* Position it absolutely */
+  left: 0;                         /* Align it to the left */
+  bottom: -5px;                    /* Position below the text */
+  transform: scaleX(0);            /* Start with scale of 0 (invisible) */
+}
+
+.navList li a:hover::after {
+  transform: scaleX(1);            /* Scale to full width on hover */
+}
+
+/* Button styles */
 .ticketButton {
   background: linear-gradient(135deg, orange, red); /* Gradient color */
-  border: none;             /* No border */
-  color: white;            /* Text color */
-  padding: 0.75rem 2rem;   /* Increased padding */
-  border-radius: 25px;     /* Rounded corners */
-  cursor: pointer;          /* Pointer cursor */
-  font-weight: 600;        /* Font weight */
-  font-size: 1.2rem;       /* Font size */
-  transition: background 0.3s; /* Smooth transition for background */
+  border: none;                     /* No border */
+  color: white;                    /* Text color */
+  padding: 0.75rem 1.5rem;         /* Increased padding */
+  border-radius: 25px;             /* Rounded corners */
+  cursor: pointer;                  /* Pointer cursor on hover */
+  font-weight: 600;                /* Increased font weight */
+  font-size: 1.2rem;               /* Increased font size */
+  transition: background 0.3s, transform 0.3s; /* Smooth transition */
+  margin-left: auto;                /* Push the button to the right */
 }
 
-.ticketButton:hover {
-  opacity: 0.9;            /* Slight change on hover */
-}
-
-.heroImage {
-  width: 100%;              /* Make images responsive */
-  height: auto;             /* Maintain aspect ratio */
-  max-width: 100%;          /* Prevent overflow */
-}
-
+/* Hide text and nav items on mobile */
 @media (max-width: 768px) {
-  .header {
-    padding: 1rem;         /* Adjust padding */
-    margin: 0;             /* Remove margin to prevent overflow */
-  }
   .navList {
-    display: none;         /* Hide navList on mobile and tablet */
+      display: none;                /* Hide the navigation list */
   }
+
+  .header {
+      justify-content: flex-start;  /* Align items to the left */
+  }
+
   .ticketButton {
-    display: block;        /* Ensure the ticket button is visible */
+      margin-left: 1rem;           /* Add some margin to the button */
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .navList {
+      flex-wrap: wrap;               /* Allow wrapping if space is tight */
+      justify-content: center;        /* Center items on smaller screens */
+  }
+
+  .navList li {
+      margin: 0 5px;                 /* Reduce margin for tighter spacing */
+  }
+
+  .navList li a {
+      font-size: 1rem;               /* Further reduce font size */
   }
 }

@@ -1,68 +1,68 @@
 /* Container centering the content */
 .faq-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-    color: #6a6b7c;
-  }
-  
-  /* Width of the FAQ content */
-  .faq-content {
-    width: 60%;
-  }
-  
-  /* Heading for the FAQ section */
-  .faq-heading {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: black;
-  }
-  
-  /* Question styles */
-  .faq-question {
-    background-color: #f9f9f9;
-    cursor: pointer;
-    padding: 15px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    transition: background-color 0.3s ease;
-  }
-  
-  .faq-question:hover {
-    background-color: #f0f0f0;
-  }
-  
-  /* Answer container with dropdown effect */
-  .faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
-    padding: 0 15px;
-    background-color: #fff;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    opacity: 0;
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
-  }
-  
-  /* Show the answer with a smooth dropdown */
-  .faq-answer.show {
-    max-height: 500px; /* Enough height for most content */
-    padding: 15px;
-    opacity: 1;
-    transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
-  }
-  
-  /* Hover effect for active question */
-  .faq-question.active {
-    background-color: #e0e0e0;
-  }
-  
-  /* FAQ item container */
-  .faq-item {
-    margin-bottom: 10px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  color: #6a6b7c;
+  font-family: sans-serif;
+}
+
+/* Width of the FAQ content */
+.faq-content {
+  width: 60%;
+}
+
+/* Heading for the FAQ section */
+.faq-heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: black;
+}
+
+/* Question styles */
+.faq-question {
+  background-color: #f9f9f9;
+  cursor: pointer;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+  background-color: #f0f0f0;
+}
+
+/* Answer container with dropdown effect */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  padding: 0 15px;
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Show the answer with a smooth dropdown */
+.faq-answer.show {
+  max-height: 500px; /* Enough height for most content */
+  padding: 15px;
+  opacity: 1;
+  transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+/* Hover effect for active question */
+.faq-question.active {
+  background-color: #e0e0e0;
+}
+
+/* FAQ item container */
+.faq-item {
+  margin-bottom: 10px;
+}

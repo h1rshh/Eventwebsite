@@ -3,10 +3,11 @@
   justify-content: space-between; /* Space between text and button */
   align-items: center; /* Align items vertically center */
   font-family: sans-serif; /* Ensures the font is sans serif */
-  width: 100%; /* Full width */
+  width: 100%;
   margin: 20px; /* Optional: Add margin for spacing */
   background: linear-gradient(135deg, orange, rgb(255, 45, 45));
   padding: 20px; /* Optional: add padding around the container */
+  margin: 0;
   color: aliceblue;
 }
 
@@ -33,8 +34,7 @@
 .countdownBox {
   display: flex; /* Use flexbox for layout */
   justify-content: space-between; /* Space out the time boxes */
-  margin-right: 20px; /* Reduced margin-right */
-  flex: 1; /* Allow it to grow and fill available space */
+  margin-right: 100px;
 }
 
 /* Countdown list styling */
@@ -71,18 +71,9 @@
   .mainBodyContainer {
       flex-direction: column; /* Stack text and countdown vertically */
       align-items: flex-start; /* Align items to the left */
-      margin: 10px; /* Reduce margin for smaller screens */
   }
 
-  .countdownBox {
-      margin-right: 0; /* Remove right margin on small screens */
-      flex-direction: column; /* Stack countdown boxes vertically */
-      margin-top: 20px; /* Add some space above countdown */
-  }
-
-  .timeBox {
-      margin-right: 0; /* No margin for time boxes */
-      margin-bottom: 10px; /* Add space below each time box */
-      width: 100%; /* Make time boxes take full width */
+  .countdownContainer {
+      margin-top: 20px; /* Add some margin above countdown */
   }
 }

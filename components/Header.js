@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styles from './Header.module.css';
 import { IoTicketSharp } from 'react-icons/io5';
 
+
 const Header = () => {
   return (
     <header className={styles.header}>
