@@ -5,6 +5,8 @@ import Aboutsec from '@/components/Aboutsec';
 import Tickets from '@/components/Tickets';
 import Footer from '@/components/Footer';
 import FAQ from '@/components/FAQ';
+import Speaker from '@/components/Speaker';
+import Registration from '@/components/Registration';
 export default function Home() {
   return (
     <>
@@ -12,8 +14,10 @@ export default function Home() {
       <Hero />
       <Mainbody />
       <Aboutsec />
+      <Speaker />
       <Tickets />
       <FAQ />
+      <Registration />
       <Footer />
     </>
   );

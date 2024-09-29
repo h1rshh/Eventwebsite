@@ -1,25 +1,88 @@
 .mainBodyContainer {
-    display: flex; /* Use flexbox layout */
-    justify-content: space-between; /* Space between text and button */
-    align-items: center; /* Align items vertically center */
-    font-family: sans-serif; /* Ensures the font is sans serif */
-    width: 100%;
-    margin: 20px; /* Optional: Add margin for spacing */
-    background: linear-gradient(135deg, orange, rgb(255, 45, 45));
-    padding: 20px; /* Optional: add padding around the container */
-    margin: 0;
-    color: aliceblue;
+  display: flex; /* Use flexbox layout */
+  justify-content: space-between; /* Space between text and button */
+  align-items: center; /* Align items vertically center */
+  font-family: sans-serif; /* Ensures the font is sans serif */
+  width: 100%; /* Full width */
+  margin: 20px; /* Optional: Add margin for spacing */
+  background: linear-gradient(135deg, orange, rgb(255, 45, 45));
+  padding: 20px; /* Optional: add padding around the container */
+  color: aliceblue;
+}
+
+/* Text container */
+.textContainer {
+  display: flex; /* Create a flex container for text */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: flex-start; /* Align text to the left */
+  font-weight: 700;
+}
+
+/* Event title styling */
+.eventTitle {
+  font-size: 2rem; /* Adjust the font size as needed */
+  line-height: 1.2; /* Adjust line height for better spacing */
+}
+
+/* Countdown container */
+.countdownContainer {
+  font-family: sans-serif; /* Set the font family to sans-serif */
+}
+
+/* Countdown box layout */
+.countdownBox {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out the time boxes */
+  margin-right: 20px; /* Reduced margin-right */
+  flex: 1; /* Allow it to grow and fill available space */
+}
+
+/* Countdown list styling */
+.countdownList {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Display items in a flex row */
+}
+
+/* Time box styling */
+.timeBox {
+  border: 2px solid #ccc; /* Thicker border around each time box */
+  padding: 20px; /* Increased padding inside the box */
+  margin-right: 20px; /* Add more right margin */
+  border-radius: 5px; /* Optional: rounded corners */
+  text-align: center; /* Center the text */
+  flex: 1; /* Make boxes flexible */
+}
+
+/* Countdown number styling */
+.countdownNumber {
+  font-size: 2em; /* Increase the font size for numbers */
+  display: block; /* Make numbers block elements */
+}
+
+/* Optional: remove margin from the last item */
+.timeBox:last-child {
+  margin-right: 0; /* No margin on the last item */
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .mainBodyContainer {
+      flex-direction: column; /* Stack text and countdown vertically */
+      align-items: flex-start; /* Align items to the left */
+      margin: 10px; /* Reduce margin for smaller screens */
   }
-  
-  .textContainer {
-    display: flex; /* Create a flex container for text */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: flex-start; /* Align text to the left */
-    font-weight: 700;
+
+  .countdownBox {
+      margin-right: 0; /* Remove right margin on small screens */
+      flex-direction: column; /* Stack countdown boxes vertically */
+      margin-top: 20px; /* Add some space above countdown */
   }
-  
-  .eventTitle {
-    font-size: 2rem; /* Adjust the font size as needed */
-    line-height: 1.2; /* Adjust line height for better spacing */
+
+  .timeBox {
+      margin-right: 0; /* No margin for time boxes */
+      margin-bottom: 10px; /* Add space below each time box */
+      width: 100%; /* Make time boxes take full width */
   }
-  
+}

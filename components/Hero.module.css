@@ -4,11 +4,12 @@
   justify-content: space-between; /* Aligns content with space between them */
   align-items: center; /* Centers items vertically */
   width: 100%; /* Full width of the screen */
+  padding: 0 10px; /* Optional: Add some padding for better spacing */
 }
 
 .heroImage {
   width: 30%; /* Set the width to 30% of the container */
-  height: 200%; /* Increase height to 2x of the original size */
+  height: auto; /* Maintain aspect ratio */
   max-width: 600px; /* Optional: Set a maximum width */
   object-fit: cover; /* Ensures the image covers its area without distortion */
 }
@@ -17,5 +18,32 @@
   font-family: Sans-serif; /* Change font family to sans-serif */
   font-size: 4.5rem; /* Increase font size */
   margin-right: 20px; /* Optional: Add some spacing between the text and image */
-  margin-left:  50px;
+  margin-left: 50px; /* Original margin */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .heroContainer {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items */
+    padding: 0 5px; /* Reduce padding */
+  }
+
+  .heroText {
+    font-size: 3rem; /* Adjust font size for smaller screens */
+    margin-left: 0; /* Remove left margin */
+    text-align: center; /* Center text */
+  }
+
+  .heroImage {
+    width: 100%; /* Make image full width */
+    max-width: none; /* Remove max-width restriction */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+
+@media (max-width: 480px) {
+  .heroText {
+    font-size: 2.5rem; /* Further adjust font size for mobile */
+  }
 }

@@ -1,5 +1,92 @@
-html, body{
+/* Global styles */
+html, body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+}
+
+/* Example Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    /* Styles for laptops */
+    .hero {
+        padding: 20px;
+    }
+    .header, .footer {
+        flex-direction: column; /* Stack header/footer items */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Styles for tablets */
+    .hero {
+        font-size: 1.5rem; /* Adjust hero font size */
+    }
+    .registration {
+        width: 90%; /* Make registration form more narrow */
+        margin: auto; /* Center align */
+    }
+    /* Adjust header for mobile */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header .ticket-button {
+        display: block; /* Only show ticket button */
+    }
+    .header .home-button {
+        display: block; /* Only show home button */
+    }
+    .header .other-buttons {
+        display: none; /* Hide other buttons on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Styles for phones */
+    .hero {
+        font-size: 1.2rem; /* Further adjust hero font size */
+    }
+    .hero img {
+        width: 100%; /* Ensure hero image does not exceed width */
+        max-width: 100%; /* Prevent image overflow */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .mainBodyContainer {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align */
+    }
+    .mainBodyContainer .countdown {
+        width: 80%; /* Decrease countdown component width */
+        font-size: 0.8rem; /* Decrease font size in main body */
+    }
+    .header {
+        display: none; /* Hide the header on mobile devices */
+    }
+    .footer {
+        font-size: 0.8rem; /* Smaller footer text */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Styles for about section */
+    .about-section img {
+        max-width: 100%; /* Fix image size in about section */
+        height: auto; /* Maintain aspect ratio */
+    }
+    .about-section {
+        font-size: 0.9rem; /* Decrease font size in about section */
+        padding: 10px; /* Add padding for spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Styles for FAQ section */
+    .faq-section {
+        padding: 20px; /* Add padding to FAQ section */
+    }
+    .faq-card {
+        margin: 10px 0; /* Add margin between cards */
+        padding: 10px; /* Add padding inside cards */
+    }
 }

@@ -6,7 +6,7 @@ const Aboutsec = () => {
   return (
     <div className={styles.container}>
       <div className={styles.imageContainer}>
-        <img src="https://themewagon.github.io/manup/img/h-about.jpg" alt="About" className={styles.image} />
+        <img src="https://www.simerjeetsingh.com/images/5.webp" alt="About" className={styles.image} />
       </div>
       <div className={styles.textContainer}>
         <h1>About Conference</h1>

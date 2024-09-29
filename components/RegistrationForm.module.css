@@ -1,0 +1,60 @@
+/* RegistrationForm.module.css */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    background-color: #fff; /* Retained the white background for the form */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    border-color: red;
+    box-shadow: 0 0 8px rgba(237, 61, 61, 0.3);
+}
+
+/* Button styles */
+.button {
+    width: 100%;
+    background: linear-gradient(135deg, orange, red); /* Gradient from orange to light red */
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Hover effect for button */
+.button:hover {
+    background: linear-gradient(135deg, #feb47b, #FF7E5F); /* Reverse the gradient on hover */
+}

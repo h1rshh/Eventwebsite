@@ -23,7 +23,7 @@ const Countdown = () => {
     let mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
     let yyyy = today.getFullYear();
     let nextYear = yyyy + 1;
-    const dayMonth = '09/30/';
+    const dayMonth = '10/15/';
     let birthday = dayMonth + yyyy;
 
     today = mm + '/' + dd + '/' + yyyy;
@@ -44,7 +44,6 @@ const Countdown = () => {
       });
 
       if (distance < 0) {
-        setMessage("It's my birthday!");
         clearInterval(interval);
       }
     }, 1000); // Update every second
@@ -74,13 +73,6 @@ const Countdown = () => {
           </li>
         </ul>
       </div>
-      {message && (
-        <div id="content" className={styles.emoji}>
-          <span>🥳</span>
-          <span>🎉</span>
-          <span>🎂</span>
-        </div>
-      )}
     </div>
   );
 };

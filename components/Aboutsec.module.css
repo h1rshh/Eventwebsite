@@ -1,56 +1,75 @@
+.container {
+  display: flex; /* Flexbox to align image and text side by side */
+  align-items: center; /* Align items vertically to the center */
+  justify-content: space-between; /* Add space between the image and text */
+  padding: 20px; /* Add padding around the container */
+  gap: 40px; /* Ensure there's enough space between the image and text */
+  margin: 0 50px; /* Add margin for overall spacing */
+  font-family: sans-serif;
+}
+
+.imageContainer {
+  flex: 1; /* Ensure the image container takes up only necessary space */
+  max-width: 40%; /* Limit the image container's width to 40% */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .image {
-    margin-top: 60px;  /* Adjust the top margin */
-    margin-left: 20px; /* Adjust the left margin */
-  }
+  width: 100%; /* Ensure the image scales to the width of the container */
+  height: auto; /* Set height to auto to maintain aspect ratio */
+  max-height: 500px; /* Add a max height to prevent the image from becoming too large */
+  object-fit: cover; /* Ensure the image maintains aspect ratio while filling the container */
+  border-radius: 10px; /* Add border radius for rounded corners */
+}
+
+.textContainer {
+  flex: 2; /* Give the text container more space (double the image) */
+  max-width: 60%; /* Ensure the text container doesn't overflow */
+}
+
+.textContainer h1 {
+  font-size: 2.5rem; /* Adjust the size of the heading */
+  margin-bottom: 20px; /* Add space below the heading */
+  font-weight: 700;
+}
+
+.textContainer p {
+  font-size: 1.2rem; /* Slightly increase the font size for readability */
+  line-height: 1.6; /* Adjust line spacing for readability */
+  margin-bottom: 20px; /* Add space below the paragraph */
+  color: #6a6b7c;
+}
+
+.textContainer ul {
+  list-style-type: none; /* Use disc bullets */
+  padding-left: 20px; /* Indent the list */
+  color: #6a6b7c;
+}
+
+.textContainer li {
+  margin-bottom: 10px; /* Add space between list items */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .container {
-    display: flex; /* Flexbox to align image and text side by side */
-    align-items: flex-start; /* Align items at the top */
-    justify-content: space-between; /* Add space between the image and text */
-    padding: 20px; /* Add padding around the container */
-    gap: 20px; /* Ensure there's space between the image and text */
-    margin: 0 50px; /* Add margin for overall spacing */
-    font-family: sans-serif;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center align items */
+    margin: 0; /* Remove margins for mobile */
   }
-  
+
   .imageContainer {
-    flex: 1; /* Ensure the image container takes up only necessary space */
-    margin-right: 20px; /* Add margin to the right of the image */
-    max-width: 40%; /* Limit the image container's width to 40% */
+    max-width: 100%; /* Allow image container to use full width */
   }
-  
+
   .image {
-    width: 100%; /* Ensure the image scales to the width of the container */
-    height: auto; /* Maintain the aspect ratio of the image */
-    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+    max-height: 400px; /* Reduce max height for mobile */
   }
-  
+
   .textContainer {
-    flex: 2; /* Give the text container more space (double the image) */
-    max-width: 60%; /* Ensure the text container doesn't overwrite the image */
-    margin-top: 160px;
+    max-width: 100%; /* Allow text container to use full width */
+    text-align: center; /* Center align text */
   }
-  
-  .textContainer h1 {
-    font-size: 2.5rem; /* Adjust the size of the heading */
-    margin-bottom: 20px; /* Add space below the heading */
-    font-weight: 700;
-  }
-  
-  .textContainer p {
-    font-size: 1rem; /* Adjust the font size for the paragraph */
-    line-height: 1.6; /* Adjust line spacing for readability */
-    margin-bottom: 20px; /* Add space below the paragraph */
-    color: #6a6b7c;
-  }
-  
-  .textContainer ul {
-    list-style-type: disc; /* Use disc bullets */
-    padding-left: 20px; /* Indent the list */
-    color: #6a6b7c;
-    list-style: none;
-  }
-  
-  .textContainer li {
-    margin-bottom: 10px; /* Add space between list items */
-  }
-  
+}
