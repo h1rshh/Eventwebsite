@@ -2,6 +2,13 @@
     position: relative;
 }
 
+/* Hide the entire Tickets component on mobile */
+@media (max-width: 768px) {
+    .container {
+        display: none; /* Hide the entire component on mobile */
+    }
+}
+
 .fullWidthImage {
     width: 100vw;
     height: auto;
